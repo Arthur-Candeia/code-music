@@ -1,0 +1,26 @@
+.container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  bottom: 5rem;
+  background-color: #212124;
+  width: 20rem;
+  height: auto;
+  border: 1px solid;
+  margin-right: 2px;
+}
+
+.title {
+  text-align: center;
+  color: #fff;
+}
+
+.playlistContainer {
+  margin: 1rem;
+  background-color: #171719;
+}
+
+.emptyText {
+  color: #6b7280;
+}

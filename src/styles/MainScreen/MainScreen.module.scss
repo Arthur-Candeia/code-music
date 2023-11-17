@@ -1,0 +1,21 @@
+.section {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  width: 100%;
+  background-color: #171719;
+}
+
+.sidebar {
+  width: 16.67%;
+  padding: 2.5rem;
+  background-color: #212124;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin-top: 2.5rem;
+}

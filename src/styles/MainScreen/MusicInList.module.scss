@@ -1,0 +1,35 @@
+.container {
+  margin: 1.25rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #718096;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: white;
+}
+
+.subtitle {
+  color: white;
+}
+
+.actionContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  height: auto;
+}

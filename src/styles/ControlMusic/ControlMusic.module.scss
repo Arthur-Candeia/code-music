@@ -1,0 +1,62 @@
+.container {
+  width: 24rem;
+  height: 3.5rem;
+  padding: 2rem 2rem 2rem 4rem;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.controls {
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  display: inline-flex;
+}
+
+.controlIcon {
+  width: 1rem;
+  height: 1rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.625rem;
+  display: flex;
+  cursor: pointer;
+}
+
+.timeInfo {
+  align-self: stretch;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  display: inline-flex;
+}
+
+.timeText {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+}
+
+.progressBarContainer {
+  width: 24rem;
+  height: 0.2rem;
+  border-radius: 0.5rem;
+  background-color: #a0aec0;
+  position: relative;
+  cursor: pointer;
+}
+
+.progressBar {
+  height: 0.2rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
