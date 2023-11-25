@@ -2,13 +2,47 @@
   "name": "projeto-music",
   "version": "0.1.0",
   "private": true,
+  "main": "public/electron/electron.js",
+  "description": "Code Music",
+  "homepage": "./",
+  "author": {
+    "name": "arthur candeia",
+    "email": "arthurheher@hotmail.com"
+  },
+  "build": {
+    "title": "music",
+    "appId": "com.example.electron",
+    "icon": "../favicon.png",
+    "productName": "Code Music",
+    "asar": "false",
+    "files": [
+      "out/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "public"
+    },
+    "win": {
+      "target": ["nsis"]
+    },
+    "nsis": {
+      "uninstallDisplayName": "Code Music",
+      "license": "license.txt",
+      "oneClick": "false",
+      "allowToChangeInstallationDirectory": "true"
+    }
+  },
   "scripts": {
     "dev": "concurrently \"npm run next\" \"npm run electron\"",
-    "electron": "electron ./electron/main.js",
+    "electron": "electron ./out/electron/electron.js",
     "next": "next",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "electron-win": "electron-builder -w -c.extraMetadata.main=./out/electron/electron.js",
+    "electron-mac": "electron-builder -m -c.extraMetadata.main=./out/electron/electron.js",
+    "electron-linux": "electron-builder -l -c.extraMetadata.main=./out/electron/electron.js"
   },
   "dependencies": {
     "next": "14.0.2",

@@ -14,9 +14,9 @@ export function useControlMusic({audioRef, audio, musicIndex, musicPlayList, set
       setMusicPlayList([...musicPlayList, music])
       if (!audioRef.current!.currentSrc) {
         setAudio(() => {
-          audioRef.current.src = `/musics/${music}`
+          audioRef.current.src = `./musics/${music}`
           audioRef.current.load()
-          return `/musics/${music}`
+          return `./musics/${music}`
         })
         setCurrentTime(audioRef.current.currentTime)
       }
@@ -70,10 +70,10 @@ export function useControlMusic({audioRef, audio, musicIndex, musicPlayList, set
     if (musicIndex > 0) {
       setMusicIndex((current) => current - 1)
       setAudio(() => {
-        audioRef.current.src = `/musics/${musicPlayList[musicIndex - 1]}`
+        audioRef.current.src = `./musics/${musicPlayList[musicIndex - 1]}`
         audioRef.current.load()
         audioRef.current.play()
-        return `/musics/${musicPlayList[musicIndex - 1]}`
+        return `./musics/${musicPlayList[musicIndex - 1]}`
       })
     }
   }
@@ -82,10 +82,10 @@ export function useControlMusic({audioRef, audio, musicIndex, musicPlayList, set
     if (musicIndex < musicPlayList.length - 1) {
       setMusicIndex((current: number) => current + 1)
       setAudio(() => {
-        audioRef.current.src = `/musics/${musicPlayList[musicIndex + 1]}`
+        audioRef.current.src = `./musics/${musicPlayList[musicIndex + 1]}`
         audioRef.current.load()
         audioRef.current.play()
-        return `/musics/${musicPlayList[musicIndex + 1]}`
+        return `./musics/${musicPlayList[musicIndex + 1]}`
       })
     }
   }
